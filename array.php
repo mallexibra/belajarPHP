@@ -38,4 +38,44 @@
 //     echo $mhs[0];
 // }
 
+// $mahasiswa = [
+//     ["Maulana Malik Ibrahim", "09495805", "Teknik Informatika"],
+//     ["Anastasya", "09809545", "Teknik Informatika"]
+// ] // Tidak effective;
+
+// Array Assosiative;
+// Definisinya sama dengan Array Numerik, Kecuali key nya
+// Key dari Array Assosiative dibuat sendiri oleh programmer
+$mahasiswa = [
+    [
+    "nama" => "Maulana Malik Ibrahim",
+    "nim" => "0347543058",
+    "jurusan" => "Teknik Informatika"
+    ],
+    [
+    "nama" => "Maulana Malik Ibrahim",
+    "nim" => "0347543058",
+    "jurusan" => "Teknik Informatika"
+    ]
+    ];
+echo $mahasiswa[1]["nim"];
+
 ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARRAY ASSOSIATIVE</title>
+</head>
+<body>
+    <?php foreach($mahasiswa as $mhs): ?>
+        <ul>
+            <li><?= $mhs["nama"]; ?></li>
+            <li><?= $mhs["nim"]; ?></li>
+            <li><?= $mhs["jurusan"]; ?></li>
+        </ul>
+    <?php endforeach; ?>
+</body>
+</html>
